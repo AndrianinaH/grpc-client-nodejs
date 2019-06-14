@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/main.ts"
+    "start": "nodemon src/app.ts"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "@types/express": "*",
     "@types/node": "*",
     "nodemon": "^1.19.1",
+    "ts-node": "^8.2.0",
     "typescript": "*"
   },
   "dependencies": {

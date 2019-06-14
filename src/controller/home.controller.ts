@@ -1,7 +1,9 @@
-import { NextFunction, Request, Response } from 'express';
+import { Request, Response } from 'express';
 
-export default class HomeController {
-  public static getDefault(req: Request, res: Response, next: NextFunction) {
+const employeController = {
+  getDefault(req: Request, res: Response) {
     res.send('Hello World!fff');
   }
-}
+};
+
+export { employeController };
