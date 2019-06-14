@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package employe;
+
+service EmployeService {
+  rpc FindOne (EmployeById) returns (Employe) {}
+  rpc FindAll (Empty) returns (EmployeList) {}
+  rpc Create (EmployeCreate) returns (Employe) {}
+  rpc Update (Employe) returns (Employe) {}
+  rpc Delete (EmployeById) returns (DeleteRet) {}
+}
+
+message EmployeById {
+  string id = 1;
+}
+
+message DeleteRet {
+  int32 deletedCount = 1; 
+}
+
+message Employe {
+  string id = 1;
+  string nom = 2;
+  string prenom = 3;
+  string poste = 4;
+  string sexe = 5;
+  string dateNaissance = 6;
+  string urlPhoto = 7;
+}
+
+message EmployeCreate {
+  string nom = 1;
+  string prenom = 2;
+  string poste = 3;
+  string sexe = 4;
+  string dateNaissance = 5;
+  string urlPhoto = 6;
+}
+
+message EmployeList {
+    repeated Employe allEmployes = 1;
+}
+
+message Empty{}
