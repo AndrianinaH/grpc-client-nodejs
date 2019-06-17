@@ -5,8 +5,24 @@ import { employeController } from './controller/employe.controller';
 dotenv.config();
 
 const app = express();
-app.use('/grpc', function(req, res) {
-  employeController.grpcConsume(req, res);
+app.use('/grpcFindAll', function(req, res) {
+  employeController.grpcFindAll(req, res);
+});
+
+app.use('/grpcFindOne', function(req, res) {
+  employeController.grpcFindOne(req, res);
+});
+
+app.use('/grpcCreate', function(req, res) {
+  employeController.grpcCreate(req, res);
+});
+
+app.use('/grpcUpdate', function(req, res) {
+  employeController.grpcUpdate(req, res);
+});
+
+app.use('/grpcDelete', function(req, res) {
+  employeController.grpcDelete(req, res);
 });
 
 app.get('/', function(req, res) {
