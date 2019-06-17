@@ -26,12 +26,10 @@
   },
   "dependencies": {
     "@grpc/proto-loader": "^0.5.1",
-    "@nestjs/common": "^6.3.1",
-    "@nestjs/core": "^6.3.1",
-    "@nestjs/microservices": "^6.3.1",
     "dotenv": "^5.0.1",
     "express": "4.16.2",
     "grpc": "^1.21.1",
+    "grpc-client-ts": "^1.1.1",
     "protobufjs": "^6.8.8",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.5.2"
